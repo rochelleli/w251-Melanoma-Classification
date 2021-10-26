@@ -1,1 +1,1 @@
-# w251-Melanona-Classification
+# w251-Melanoma-Classification
