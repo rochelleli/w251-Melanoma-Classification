@@ -49,7 +49,7 @@ unzip to /data directory
 #	|
 #	-- python files
 
-time sudo docker run -it --rm --net=host --gpus all  --privileged -v /home/ubuntu/fpdata:/data -v /home/ubuntu/w251/fp:/media melanoma
+time sudo docker run -it --rm --net=host --gpus all  --privileged -v /home/ubuntu/fpdata:/data -v /home/ubuntu/w251/fp:/media joslateriii/melanoma
 
 #You should get a docker root prompt
 
