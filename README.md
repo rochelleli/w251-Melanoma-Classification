@@ -2,6 +2,8 @@
 
 # Simulating Hand-held Melanoma Detection device
 
+![Capture the Moles](https://github.com/rochelleli/w251-Melanoma-Classification/blob/main/iphone_capture.PNG)
+
 Set up your Test directory with images you want to run predictions on
 In our Simulation we selected 4 images 2 positive and 2 negative
 
@@ -15,4 +17,5 @@ Download make sure the drives are mapped to where you have the GitHub repositori
 
 Open the Melanoma-Edge.pynb in Jupyter and run it
 
-
+## Scan results
+![Scan Results](https://github.com/rochelleli/w251-Melanoma-Classification/blob/main/scan_results.PNG)
