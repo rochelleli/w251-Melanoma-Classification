@@ -1,0 +1,5 @@
+image_name,patient_id,sex,age_approx,anatom_site_general_challenge,diagnosis,benign_malignant,target,tfrecord,width,height
+ISIC_2637011,IP_7279968,male,45,head/neck,unknown,benign,0,0,6000,4000
+ISIC_0149568,IP_0962375,female,55,upper extremity,melanoma,malignant,1,0,6000,4000
+ISIC_0156772,IP_3586223,female,30,torso,nevus,benign,0,0,3264,2448
+ISIC_0188432,IP_0135517,female,50,upper extremity,melanoma,malignant,1,5,3264,2448

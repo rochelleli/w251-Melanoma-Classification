@@ -19,7 +19,7 @@ from util import GradualWarmupSchedulerV2
 #import apex
 #from apex import amp
 from torch.nn.parallel import DistributedDataParallel as DDP
-from dataset import get_df, get_df_test, get_transforms, MelanomaDataset
+from diag_dataset import get_df_diag, get_transforms, MelanomaDataset
 from models import Effnet_Melanoma, Resnest_Melanoma, Seresnext_Melanoma
 
 
