@@ -80,24 +80,24 @@ def get_transforms(image_size):
     return transforms_train, transforms_val
 
 
-def get_df_test(kernel_type, data_dir):
+def get_df_diag(kernel_type, data_dir):
 
-    # test data
-    df_train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
-    df_test = pd.read_csv(os.path.join(data_dir, 'test.csv'))
-    df_test['filepath'] = df_test['image_name'].apply(lambda x: os.path.join(data_dir, 'test', f'{x}.jpg'))
+    # diag data
+    #df_train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
+    df_diag = pd.read_csv(os.path.join(data_dir, 'diag.csv'))
+    df_diag['filepath'] = df_diag['image_name'].apply(lambda x: os.path.join(data_dir, 'diag', f'{x}.jpg'))
     
     # class mapping
-    diagnosis2idx = {d: idx for idx, d in enumerate(sorted(df_train.diagnosis.unique()))}
-    df_train['target'] = df_train['diagnosis'].map(diagnosis2idx)
+    diagnosis2idx = {d: idx for idx, d in enumerate(sorted(df_diag.diagnosis.unique()))}
+    df_diag['target'] = df_diag['diagnosis'].map(diagnosis2idx)
     mel_idx = diagnosis2idx['melanoma']
 
-    return df_test, mel_idx
+    return df_diag, mel_idx
 
 def get_df(kernel_type, data_dir):
 
     # 2020 data
-    df_train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
+    #df_train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
     df_train = df_train[df_train['tfrecord'] != -1].reset_index(drop=True)
     df_train['filepath'] = df_train['image_name'].apply(lambda x: os.path.join(data_dir, 'train', f'{x}.jpg'))
 
