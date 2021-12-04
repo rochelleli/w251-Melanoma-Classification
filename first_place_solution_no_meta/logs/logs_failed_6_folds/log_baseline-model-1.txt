@@ -1,0 +1,10 @@
+Fri Dec  3 06:27:24 2021 Fold 0, Epoch 1, lr: 0.0000300, train loss: 0.68354, valid loss: 0.28612, acc: 93.5069, auc: 0.725179, auc_20: 0.725179.
+Fri Dec  3 06:33:31 2021 Fold 0, Epoch 2, lr: 0.0003000, train loss: 0.28201, valid loss: 0.24627, acc: 94.1654, auc: 0.839949, auc_20: 0.839949.
+Fri Dec  3 06:39:40 2021 Fold 1, Epoch 1, lr: 0.0000300, train loss: 0.68562, valid loss: 0.27622, acc: 93.9954, auc: 0.797983, auc_20: 0.797983.
+Fri Dec  3 06:45:47 2021 Fold 1, Epoch 2, lr: 0.0003000, train loss: 0.29250, valid loss: 0.20423, acc: 94.4843, auc: 0.839983, auc_20: 0.839983.
+Fri Dec  3 06:51:54 2021 Fold 2, Epoch 1, lr: 0.0000300, train loss: 0.68998, valid loss: 0.29516, acc: 93.0892, auc: 0.758077, auc_20: 0.758077.
+Fri Dec  3 06:58:01 2021 Fold 2, Epoch 2, lr: 0.0003000, train loss: 0.28343, valid loss: 0.22390, acc: 93.8063, auc: 0.858835, auc_20: 0.858835.
+Fri Dec  3 07:04:09 2021 Fold 3, Epoch 1, lr: 0.0000300, train loss: 0.69142, valid loss: 0.31613, acc: 93.1752, auc: 0.730220, auc_20: 0.730220.
+Fri Dec  3 07:10:17 2021 Fold 3, Epoch 2, lr: 0.0003000, train loss: 0.28723, valid loss: 0.21026, acc: 94.5218, auc: 0.877998, auc_20: 0.877998.
+Fri Dec  3 07:16:24 2021 Fold 4, Epoch 1, lr: 0.0000300, train loss: 0.69982, valid loss: 0.27989, acc: 93.4233, auc: 0.822627, auc_20: 0.822627.
+Fri Dec  3 07:22:30 2021 Fold 4, Epoch 2, lr: 0.0003000, train loss: 0.28412, valid loss: 0.21548, acc: 94.3278, auc: 0.876602, auc_20: 0.876602.
