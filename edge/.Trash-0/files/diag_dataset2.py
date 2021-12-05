@@ -80,51 +80,16 @@ def get_transforms(image_size):
     return transforms_train, transforms_val
 
 
-def get_df_diag(kernel_type, data_dir):
+def get_df_diag(data_dir):
 
     # diag data
-    #df_train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
+    df_train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
     df_diag = pd.read_csv(os.path.join(data_dir, 'diag.csv'))
     df_diag['filepath'] = df_diag['image_name'].apply(lambda x: os.path.join(data_dir, 'diag', f'{x}.jpg'))
     
     # class mapping
-    diagnosis2idx = {d: idx for idx, d in enumerate(sorted(df_diag.diagnosis.unique()))}
-    df_diag['target'] = df_diag['diagnosis'].map(diagnosis2idx)
+    diagnosis2idx = {d: idx for idx, d in enumerate(sorted(df_train.diagnosis.unique()))}
+    df_diag['target'] = df_train['diagnosis'].map(diagnosis2idx)
     mel_idx = diagnosis2idx['melanoma']
 
     return df_diag, mel_idx
-
-def get_df(kernel_type, data_dir):
-
-    # 2020 data
-    #df_train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
-    df_train = df_train[df_train['tfrecord'] != -1].reset_index(drop=True)
-    df_train['filepath'] = df_train['image_name'].apply(lambda x: os.path.join(data_dir, 'train', f'{x}.jpg'))
-
-    if 'newfold' in kernel_type:
-        tfrecord2fold = {
-            8:0, 5:0, 11:0,
-            7:1, 0:1, 6:1,
-            10:2, 12:2, 13:2,
-            9:3, 1:3, 3:3,
-            14:4, 2:4, 4:4,
-        }
-    elif 'oldfold' in kernel_type:
-        tfrecord2fold = {i: i % 5 for i in range(15)}
-    else:
-        tfrecord2fold = {
-            2:0, 4:0, 5:0,
-            1:1, 10:1, 13:1,
-            0:2, 9:2, 12:2,
-            3:3, 8:3, 11:3,
-            6:4, 7:4, 14:4,
-        }
-    df_train['fold'] = df_train['tfrecord'].map(tfrecord2fold)
-    df_train['is_ext'] = 0
-
-    # class mapping
-    diagnosis2idx = {d: idx for idx, d in enumerate(sorted(df_train.diagnosis.unique()))}
-    df_train['target'] = df_train['diagnosis'].map(diagnosis2idx)
-    mel_idx = diagnosis2idx['melanoma']
-
-    return df_train, mel_idx
